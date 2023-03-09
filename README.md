@@ -50,9 +50,7 @@ B2C,B2B 웹서비스를 개발하고 운영하기 위한 기본적인 골격 만
 
 ## 개발 내용
 > 현재 메뉴 생성 및 권한 할당 개발 중
-권한 할당 프로세스
 ![Login Process](https://user-images.githubusercontent.com/124989074/224017729-7ff17472-66e9-4e89-a0da-617ba8ccd8eb.png)
-
 ![Authentication Process](https://user-images.githubusercontent.com/124989074/224017752-5ff0da37-1e6c-4bb3-bf51-173985252920.png)
 
 
