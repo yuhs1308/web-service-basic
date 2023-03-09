@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yuhs.admin.mapper.admindb.AdminMemberMapper">
+	<select id="getAdminMember" resultType="map">
+		SELECT TOP 1 [AM_ID],[AM_PW],[AM_NAME],[AM_MOBILE],[AM_EMAIL],[AM_POSITION],[AM_DEPARTMENT],[AM_TEAM],[AM_EXTENTIONLINE],[AAI_REGDT],[AM_UPDATEDT],[AM_UPMEMID]
+		FROM AD_MEMBER WHERE AM_ID = #{inputId} AND AM_PW = #{shaPassword}
+	</select>
+	
+	<select id="checkMemberCount" resultType="int">
+		SELECT COUNT(AM_ID) FROM AD_MEMBER WHERE AM_ID = #{inputMemberId} 
+	</select>
+	
+	<insert id="insertMember" >
+		INSERT INTO AD_MEMBER([AM_ID],[AM_PW],[AM_NAME],[AM_MOBILE],[AM_EMAIL],[AM_POSITION],[AM_DEPARTMENT],[AM_TEAM],[AM_EXTENTIONLINE])
+		VALUES (#{inputMemberId},#{shaPassword},#{inputMemberName},#{inputMobileNumber},#{inputEmail},#{inputPosition},#{inputDepartment},#{inputTeam},'000')
+	</insert>
+</mapper>

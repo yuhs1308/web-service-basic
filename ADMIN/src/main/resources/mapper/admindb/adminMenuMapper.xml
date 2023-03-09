@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yuhs.admin.mapper.admindb.AdminMenuMapper">
+	<select id="getAllMenuList" resultType="map">
+		WITH MENU_TREE  AS (
+		  SELECT  
+		         AM_IDX
+		       , AM_DEPTH
+		       , AM_SORT
+			   , convert(varchar(255), AM_IDX) SORT  
+			   , AM_PARENTIDX
+			   , AM_URL
+			   , AM_TITLE
+			   , AM_DESC
+		    FROM AD_MENU
+		    WHERE AM_PARENTIDX = 0
+		    UNION ALL 
+		    SELECT
+		         B.AM_IDX
+		       , B.AM_DEPTH
+		       , B.AM_SORT
+			   , convert(varchar(255), convert(nvarchar,C.SORT) + ' > ' +  convert(varchar(255), B.AM_IDX)) SORT
+			   , B.AM_PARENTIDX
+			   , B.AM_URL
+			   , B.AM_TITLE
+			   , B.AM_DESC
+		    FROM  AD_MENU B, MENU_TREE C
+		    WHERE B.AM_PARENTIDX = C.AM_IDX
+		) 
+		SELECT AM_IDX,AM_DEPTH,AM_SORT,SORT,AM_PARENTIDX,AM_URL,AM_TITLE,AM_DESC FROM MENU_TREE order by SORT
+	</select>
+	
+	<insert id="insertMenu">
+		INSERT INTO AD_MENU (AM_DEPTH,AM_SORT,AM_PARENTIDX,AM_URL,AM_TITLE,AM_DESC)
+		VALUES(#{inputDepth},#{inputSort},#{inputParentIdx},#{inputUrl},#{inputTitle},#{inputDesc})
+	</insert>
+</mapper>

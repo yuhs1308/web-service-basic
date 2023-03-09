@@ -1,0 +1,67 @@
+{"properties": [
+  {
+    "name": "spring.datasource.userdb.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.userdb.driver-class-name'"
+  },
+  {
+    "name": "spring.datasource.userdb.jdbc-url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.userdb.jdbc-url'"
+  },
+  {
+    "name": "spring.datasource.userdb.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.userdb.username'"
+  },
+  {
+    "name": "spring.datasource.userdb.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.userdb.password'"
+  },
+  {
+    "name": "spring.datasource.admindb.driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.admindb.driverClassName'"
+  },
+  {
+    "name": "spring.datasource.admindb.jdbc-url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.admindb.jdbc-url'"
+  },
+  {
+    "name": "spring.datasource.admindb.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.admindb.username'"
+  },
+  {
+    "name": "spring.datasource.admindb.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.admindb.password'"
+  },
+  {
+    "name": "spring.datasource.systemdb.driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.systemdb.driverClassName'"
+  },
+  {
+    "name": "spring.datasource.systemdb.jdbc-url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.systemdb.jdbc-url'"
+  },
+  {
+    "name": "spring.datasource.systemdb.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.systemdb.username'"
+  },
+  {
+    "name": "spring.datasource.systemdb.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.systemdb.password'"
+  },
+  {
+    "name": "spring.datasource.admindb.driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.admindb.driverClassName'"
+  }
+]}
